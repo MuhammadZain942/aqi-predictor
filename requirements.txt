@@ -1,0 +1,7 @@
+hopsworks==3.7.0
+pandas
+scikit-learn
+streamlit
+requests
+python-dotenv
+joblib

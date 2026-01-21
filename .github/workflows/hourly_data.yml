@@ -1,0 +1,32 @@
+name: Hourly AQI Data Update
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs at the start of every hour
+  workflow_dispatch:      # Allows you to click a button to run it manually for testing
+
+jobs:
+  update_features:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install hopsworks==4.2.2 pyarrow confluent-kafka
+
+      - name: Run Feature Pipeline
+        env: 
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        run: python 1_feature_pipeline.py

@@ -1,0 +1,32 @@
+name: Daily Model Retraining
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # Runs every day at Midnight UTC
+  workflow_dispatch:
+
+jobs:
+  train_model:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install hopsworks==4.2.2 pyarrow scikit-learn
+
+      - name: Run Training Pipeline
+        env: 
+          HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+        run: python 2_training_pipeline.py
