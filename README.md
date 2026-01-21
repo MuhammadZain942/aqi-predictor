@@ -4,7 +4,7 @@
 
 **Submitted to:** 10Pearls
 **Submitted by:** Muhammad Zain
-**Role:** MLOps Intern
+**Role:** DataScience Intern
 **Project Type:** End-to-End Serverless Machine Learning Pipeline
 
 ---
