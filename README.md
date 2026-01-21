@@ -132,7 +132,7 @@ python -m streamlit run 3_app.py
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Muhammad Zain**
 DataScience Intern
