@@ -1,4 +1,4 @@
-# 🌫️ Rawalpindi Air Quality Predictor (End-to-End MLOps)
+# Rawalpindi Air Quality Predictor (End-to-End MLOps)
 
 ## Internship Project Submission
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 The **Rawalpindi Air Quality Predictor** is a production-grade, end-to-end MLOps system designed to forecast the Air Quality Index (AQI) for Rawalpindi, Pakistan. The project demonstrates a fully automated, serverless machine learning pipeline that continuously ingests real-time data, retrains multiple models, and deploys the best-performing model without manual intervention.
 
@@ -17,7 +17,7 @@ The system is built using modern MLOps best practices, including CI/CD automatio
 
 ---
 
-## 📊 Key Performance Metrics
+## Key Performance Metrics
 
 During validation and testing, multiple machine learning algorithms were evaluated. The **Random Forest Regressor** consistently emerged as the top-performing model:
 
@@ -27,7 +27,7 @@ During validation and testing, multiple machine learning algorithms were evaluat
 
 ---
 
-## 🚀 Project Objectives
+## Project Objectives
 
 * **Predictive Capability:** Forecast AQI trends for the next **72 hours (3 days)** to support environmental awareness and decision-making
 * **Full Automation:** Implement a serverless MLOps architecture with zero manual intervention for data ingestion, training, and deployment
@@ -36,7 +36,7 @@ During validation and testing, multiple machine learning algorithms were evaluat
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 The project is organized into **three decoupled and automated pipelines**, ensuring modularity and maintainability.
 
@@ -77,7 +77,7 @@ The project is organized into **three decoupled and automated pipelines**, ensur
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 | Component             | Technology     | Purpose                                   |
 | --------------------- | -------------- | ----------------------------------------- |
@@ -90,7 +90,7 @@ The project is organized into **three decoupled and automated pipelines**, ensur
 
 ---
 
-## 🏃‍♂️ Installation & Local Execution
+## Installation & Local Execution
 
 Follow the steps below to run the project locally.
 
@@ -123,7 +123,7 @@ python -m streamlit run 3_app.py
 
 ---
 
-## 📌 Project Highlights
+## Project Highlights
 
 * Fully automated **serverless MLOps pipeline**
 * Real-time data ingestion with continuous retraining
